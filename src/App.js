@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
+  const APP_ID = "1a34b007";
+  const APP_KEY = "91a4b8780cee1fbfc5f733b36483f6fd";
+
+  const example = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`;
+
+  useEffect(() => {}, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>hello</h1>
+      <form className="search-form">
+        <input type="text" className="search-bar" />
+        <button className="search-button" type="submit">
+          Search
+        </button>
+      </form>
     </div>
   );
 }
